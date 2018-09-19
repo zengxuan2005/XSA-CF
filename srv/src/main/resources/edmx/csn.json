@@ -1,0 +1,163 @@
+{
+  "definitions": {
+    "cxs.calm.SampleServices": {
+      "kind": "service"
+    },
+    "cxs.calm.SampleServices.Customer": {
+      "kind": "entity",
+      "source": "cxs.calm.SampleService.Customer",
+      "elements": {
+        "CustomerID": {
+          "value": {
+            "=": "Customer.CustomerID"
+          },
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "Type": {
+          "value": {
+            "=": "Customer.Type"
+          },
+          "key": true,
+          "type": "cds.String",
+          "length": 20
+        },
+        "CustomerName": {
+          "value": {
+            "=": "Customer.CustomerName"
+          },
+          "type": "cds.String",
+          "length": 100
+        },
+        "Premium": {
+          "value": {
+            "=": "Customer.Premium"
+          },
+          "type": "cds.Boolean"
+        },
+        "CustAddress_Street": {
+          "type": "cds.String",
+          "length": 100,
+          "viaTransform": true,
+          "value": {
+            "=": "Customer.CustAddress_Street"
+          }
+        },
+        "CustAddress_Area": {
+          "type": "cds.String",
+          "length": 100,
+          "viaTransform": true,
+          "value": {
+            "=": "Customer.CustAddress_Area"
+          }
+        },
+        "CustAddress_City": {
+          "type": "cds.String",
+          "length": 30,
+          "viaTransform": true,
+          "value": {
+            "=": "Customer.CustAddress_City"
+          }
+        },
+        "CustAddress_State": {
+          "type": "cds.String",
+          "length": 30,
+          "viaTransform": true,
+          "value": {
+            "=": "Customer.CustAddress_State"
+          }
+        },
+        "CustAddress_Country": {
+          "type": "cds.String",
+          "length": 100,
+          "viaTransform": true,
+          "value": {
+            "=": "Customer.CustAddress_Country"
+          }
+        }
+      },
+      "@Common.Label": "Customer"
+    },
+    "cxs.calm.SampleService": {
+      "kind": "context",
+      "@OData.publish": true
+    },
+    "cxs.calm.SampleService.Customer": {
+      "kind": "entity",
+      "elements": {
+        "CustomerID": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "Type": {
+          "key": true,
+          "type": "cds.String",
+          "length": 20
+        },
+        "CustomerName": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "Premium": {
+          "type": "cds.Boolean"
+        },
+        "CustAddress_Street": {
+          "type": "cds.String",
+          "length": 100,
+          "viaTransform": true
+        },
+        "CustAddress_Area": {
+          "type": "cds.String",
+          "length": 100,
+          "viaTransform": true
+        },
+        "CustAddress_City": {
+          "type": "cds.String",
+          "length": 30,
+          "viaTransform": true
+        },
+        "CustAddress_State": {
+          "type": "cds.String",
+          "length": 30,
+          "viaTransform": true
+        },
+        "CustAddress_Country": {
+          "type": "cds.String",
+          "length": 100,
+          "viaTransform": true
+        }
+      }
+    },
+    "cxs.calm.SampleService.Address": {
+      "kind": "type",
+      "elements": {
+        "Street": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "Area": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "City": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "State": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 100
+        }
+      }
+    }
+  },
+  "version": {
+    "creator": "CDS Compiler v1.0.27",
+    "csn": "0.0.2"
+  },
+  "namespace": "cxs.calm",
+  "@sql_mapping": "plain"
+}
