@@ -9,6 +9,7 @@ modules:
    requires:
     - name: hdi_db
 
+this is a test
 
  - name: srv
    type: java
